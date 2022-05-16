@@ -10,17 +10,17 @@ class Similarity:
         self.features = features
 
     def recommend(self, values, customer_feature1, customer_feature2, customer_feature3, customer_feature4, k1 = 4, k2=1, k3=1, k4=1) -> list:
+    
         similarity_list = list()
         similarity_list_img_1 = list()
         similarity_list_img_2 = list()
         similarity_list_img_3 = list()
         final_result = list()
         for each_img in self.features:
-
             similarity_list.append(self.cosine_similarity(values, customer_feature1, self.avrage_point(each_img)))
-            similarity_list_img_1.append(self.cosine_similarity(values, customer_feature1, self.avrage_point(each_img)))
-            similarity_list_img_2.append(self.cosine_similarity(values, customer_feature1, self.avrage_point(each_img)))
-            similarity_list_img_3.append(self.cosine_similarity(values, customer_feature1, self.avrage_point(each_img)))
+            similarity_list_img_1.append(self.cosine_similarity(values, customer_feature2, self.avrage_point(each_img)))
+            similarity_list_img_2.append(self.cosine_similarity(values, customer_feature3, self.avrage_point(each_img)))
+            similarity_list_img_3.append(self.cosine_similarity(values, customer_feature4, self.avrage_point(each_img)))
 
         similarity_list = np.array(similarity_list)
         similarity_list_img_1 = np.array(similarity_list_img_1)
@@ -55,7 +55,10 @@ class Similarity:
     def avrage_point(self, img_src: list) -> list:
         final_list = []
         for each_img in img_src:
-            final_list.append(mean(each_img))
+            if each_img is list:
+                final_list.append(mean(each_img))
+            else:
+                final_list.append(each_img)
         return final_list
 
     def distance_2(self, x, y, values):
