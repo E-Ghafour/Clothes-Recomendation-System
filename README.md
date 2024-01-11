@@ -1,14 +1,10 @@
-# SE_Project_Ai
-Ai field of Morse Coders group
-link for download clothes dataset:  https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset
-
 # Clothes Recommendation System
 
 ## Overview
 
-This repository focuses on the implementation of a clothes recommendation system that tailors suggestions based on user preferences. Specifically, this repository encompasses the recommendation part of the complete system.
+This repository focuses on the implementation of a clothes recommendation system that tailors suggestions based on user preferences. We extract user's taste by asking some questions and then, represent it with a numeric vector. Finally, we utilize some similarity functions and clustering algorithms like Kmeans++ to recommend clothes. You can find out more details about this recommendation system on **[this google slide link](https://docs.google.com/presentation/d/1_Zp6elkHekhsne36Kl5X0O_5E8RYuCYJ-T1GjDTCuSw/edit?usp=sharing)** that is representation of the system.
 
-![seventh question](Clothes_recommendation.png)
+[![Seventh Question](Clothes_recommendation.png)](https://docs.google.com/presentation/d/1_Zp6elkHekhsne36Kl5X0O_5E8RYuCYJ-T1GjDTCuSw/edit?usp=sharing)
 
 ## Features
 
